@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Mapping</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        #map {
+            border: 2px solid #333;
+            width: 80vw;
+            height: 80vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+
+    <script src="./keys.js"></script>
+    <script>
+        let map;
+        document.addEventListener("DOMContentLoaded", () => {
+            let s = document.createElement("script");
+            document.head.appendChild(s);
+            s.addEventListener("load", () => {
+                //script has loaded
+                console.log("script has loaded");
+                map = new google.maps.Map(document.getElementById("map"), {
+                    center: {
+                        lat: 45.3496711,
+                        lng: -75.7569551
+                    },
+                    zoom: 16,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                });
+            });
+            s.src = `https://maps.googleapis.com/maps/api/js?key=${MAPKEY}`;
+        });
+    </script>
+</body>
+
+</html>
