@@ -42,6 +42,27 @@
                     zoom: 16,
                     mapTypeId: google.maps.MapTypeId.ROADMAP
                 });
+
+                // implementing active wells in LB 
+                var circle = new google.maps.Circle({
+                    map: map,
+                    center: new google.maps.LatLng(33.83155, -118.102369),
+                    radius: 100, 
+                    strokeColor: "#0000FF",
+                    fillColor: "blue"
+                });
+                
+                // implementing pumping station in LB 
+                var rectangle = new google.maps.rectangle({
+                    map: map,
+                    bounds: new google.maps.LatLng(
+                        new google.maps.LatLng(123, 123),
+                        new google.maps.LatLng(123, 123)
+                    ),
+                    fillColor: "#FFC107",
+                    strokeColor: "red",
+                });
+
             });
             s.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyD7p_NsbSO7TDme0twe1sCSwlSPRfHpT7E`;
         });

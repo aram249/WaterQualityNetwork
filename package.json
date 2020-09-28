@@ -1,0 +1,24 @@
+{
+  "name": "waterqualitynetwork",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":  "node --experimental-modules ActiveWells.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aram249/WaterQualityNetwork.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aram249/WaterQualityNetwork/issues"
+  },
+  "homepage": "https://github.com/aram249/WaterQualityNetwork#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
