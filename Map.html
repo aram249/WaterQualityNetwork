@@ -34,36 +34,242 @@
             s.addEventListener("load", () => {
                 //script has loaded
                 console.log("script has loaded");
+                // New Map
                 map = new google.maps.Map(document.getElementById("map"), {
                     center: {
                         lat: 33.7830,
                         lng: -118.1129
                     },
-                    zoom: 16,
+                    zoom: 13,
                     mapTypeId: google.maps.MapTypeId.ROADMAP
                 });
 
-                // implementing active wells in LB 
-                var circle = new google.maps.Circle({
-                    map: map,
-                    center: new google.maps.LatLng(33.83155, -118.102369),
-                    radius: 100, 
-                    strokeColor: "#0000FF",
-                    fillColor: "blue"
+                // Adding Markers For Active Wells
+                addMarker({ 
+                    coords:{lat: 33.83155, lng: -118.102369},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'
                 });
+                addMarker({ coords:{lat:33.830464, lng: -118.113013},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.830378, lng: -118.124025},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.830375, lng: -118.12082},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.830417, lng: -118.105052},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.831926, lng: -118.099261},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.828767, lng: -118.087819},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.825665, lng: -118.084148},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.824912, lng: -118.091661},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.822133, lng: -118.091354},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.819996, lng: -118.091016},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.810208, lng: -118.096899},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.810353, lng: -118.10339},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.817933, lng: -118.108255},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.819242, lng: -118.134382},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.823555, lng: -118.13427},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.810244, lng: -118.150926},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.798083, lng: -118.138175},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.799551, lng: -118.138094},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.799508, lng: -118.13641},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.815513, lng: -118.15928},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.827911, lng: -118.165699},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.851619, lng: -118.175488},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.851542, lng: -118.175488},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.851443, lng: -118.171968},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.83874, lng: -118.167908},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.830516, lng: -118.133328},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.820374, lng: -118.129576},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.810344, lng: -118.155230},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
                 
-                // implementing pumping station in LB 
-                var rectangle = new google.maps.rectangle({
-                    map: map,
-                    bounds: new google.maps.LatLng(
-                        new google.maps.LatLng(123, 123),
-                        new google.maps.LatLng(123, 123)
-                    ),
-                    fillColor: "#FFC107",
-                    strokeColor: "red",
+                // Adding Markers for Misc Wells
+                addMarker({ coords:{lat: 33.842163, lng: -118.199212},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/grn-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'
+                });
+                addMarker({ coords:{lat: 33.825731 , lng: -118.08851},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/grn-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'
                 });
 
+                // Adding Monitoring wells
+                addMarker({ coords:{lat: 33.879445, lng: -118.206371},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/ylw-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'
+                });
+                addMarker({ coords:{lat: 33.873186, lng: -118.15452},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/ylw-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.865788, lng: -118.186141},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/ylw-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.836031, lng: -118.193997},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/ylw-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.824112, lng: -118.212817},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/ylw-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.815198, lng: -118.211367},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/ylw-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.788116, lng: -118.211737},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/ylw-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.821175, lng: -118.086},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/ylw-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.808823, lng: -118.125523},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/ylw-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.795788, lng: -118.107714},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/ylw-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.788594, lng: -118.108074},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/ylw-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.788582, lng: -118.112514},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/ylw-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.787157, lng: -118.123403},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/ylw-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.783329, lng: -118.156691},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/ylw-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.761466, lng: -118.096569},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/ylw-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+                addMarker({ coords:{lat: 33.763401, lng: -118.102229},
+                    iconImage: 'http://maps.google.com/mapfiles/kml/paddle/ylw-blank-lv.png',
+                    content: '<h3>pH level: </h3><h3>Conductivty:</h3><h3>Turbidity:</h3>'});
+
+                // Add Marker Function
+                function addMarker(props){
+                    var marker = new google.maps.Marker({
+                        position: props.coords,
+                        map: map, 
+                    });
+
+                    // Check For Custome Icon
+                    if(props.iconImage){
+                        // Set Icon Image
+                        marker.setIcon(props.iconImage);
+                    }
+
+                    // Check Content
+                    if(props.content){
+                        var infowindow = new google.maps.InfoWindow({
+                            content: props.content
+                        });
+
+                        marker.addListener('click', function(){
+                            infowindow.open(map, marker);
+                        });
+                    }
+                }
+                // Implement Rectangle for LBWD department
+                const rectangle = new google.maps.Rectangle({
+                    map: map,
+                    strokeColor: "#0000FF",
+                    strokeOpacity: 0.8,
+                    strokeWidth: 2, 
+                    fillColor: "#0000FF",
+                    fillOpacity: 0.35,
+                    
+                    bounds: {
+                        north: 33.818798, 
+                        south: 33.817202,
+                        east: -118.168993,
+                        west: -118.171890, 
+                    }
+                });
+
+                // Implement Rectangle for LBWD treatment plant
+                const rectangle2 = new google.maps.Rectangle({
+                    map: map,
+                    strokeColor: "#0000FF",
+                    strokeOpacity: 0.8,
+                    strokeWidth: 2, 
+                    fillColor: "#0000FF",
+                    fillOpacity: 0.35,
+                    bounds: {
+                        north: 33.804257,
+                        south: 33.801583,
+                        east: -118.149988,
+                        west: -118.151242
+                    }
+                });
+
+                const rectangle3 = new google.maps.Rectangle({
+                    map: map,
+                    strokeColor: "#0000FF",
+                    strokeOpacity: 0.8,
+                    strokeWidth: 2, 
+                    fillColor: "#0000FF",
+                    fillOpacity: 0.35,
+                    bounds: {
+                        north: 33.815217,
+                        south: 33.815044,
+                        east: -118.173690,
+                        west: -118.174024
+                    }
+                });
             });
+
+            
             s.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyD7p_NsbSO7TDme0twe1sCSwlSPRfHpT7E`;
         });
     </script>
