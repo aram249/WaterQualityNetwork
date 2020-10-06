@@ -43,16 +43,14 @@ const int CsPin = 4;
 
 #include "SdService.h"
 #include <SPI.h>
-#include "Debug.h"
 #include "GravityRtc.h"
 
 extern GravityRtc rtc;
 String dataString = "";
 
 
-SdService :: SdService (ISensor * gravitySensor []): chipSelect (CsPin), sdDataUpdateTime ( 0 )
+SdService :: SdService (): chipSelect (CsPin), sdDataUpdateTime ( 0 )
 {
-	this->gravitySensor = gravitySensor;
 }
 
 
@@ -66,18 +64,18 @@ SdService :: ~ SdService ()
 //********************************************************************************************
 void SdService::setup()
 {
-	Debug::println(F("Initializing SD card..."));
+//	Debug::println(F("Initializing SD card..."));
 
 	pinMode(SS, OUTPUT);
 
 	if (!SD.begin(chipSelect))
 	{
-		Debug::println(F("Card failed, or not present"));
+//		Debug::println(F("Card failed, or not present"));
 		// don't do anything more:
 		return;
 	}
 	sdReady = true;
-	Debug::println(F("card initialized."));
+//	Debug::println(F("card initialized."));
 
 	// write the file header
 	dataFile = SD.open("sensor.csv", FILE_WRITE);
@@ -120,12 +118,12 @@ void SdService::update()
 		{
 			dataFile.print(dataString);
 			dataFile.close();
-			Debug::print(dataString);
+//			Debug::print(dataString);
 
 		}
 
 		dataString = "";
-		//ph
+		/*/ph
 		if (this->gravitySensor[0] != NULL) {
 			connectString(this->gravitySensor[0]->getValue());
 		}
@@ -159,14 +157,14 @@ void SdService::update()
 		}
 		else
 			connectString(0);
-
+*/
 		// write SD card
 		dataFile = SD.open("sensor.csv", FILE_WRITE);
 		if (dataFile)
 		{
 			dataFile.println(dataString);
 			dataFile.close();
-			Debug::println(dataString);
+//			Debug::println(dataString);
 
 		}
 		sdDataUpdateTime = millis();
