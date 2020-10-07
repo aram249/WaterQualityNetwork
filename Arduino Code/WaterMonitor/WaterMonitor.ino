@@ -45,6 +45,8 @@
 #include "GravityRtc.h"
 #include "SdService.h"
 
+#include <ArduinoJson.h>
+
 #include <SD.h>
 #include <Wire.h>
 #include "OneWire.h"
@@ -53,10 +55,11 @@
 #include <EEPROM.h>
 
 //Define Pins for each sensor
+#define DS18S20_Pin 5 //DS18S20 Signal pin on digital 5
 #define TURBIDITY_PIN A0
 #define EC_PIN A1
 #define PH_PIN A2
-#define DS18S20_Pin 5 //DS18S20 Signal pin on digital 2
+
 
 //Turbidity sensor variables
 float turbidityVoltage, turbidityValue;
@@ -128,6 +131,17 @@ void loop() {
 	}
   ec.calibration(ecVoltage,temperature);  // calibration process by Serail CMD
   ph.calibration(pHVoltage,temperature);  // calibration process by Serail CMD
+
+  if(Serial.read() == "json")
+  {
+    DynamicJsonDocument jBuffer;
+    JsonObject& root = jBuffer.createObject();
+
+    root["Temprature"] = temperature;
+    root["Turbidity"] = turbidityValue;
+    root["pH"] = phValue;
+    root["EC"] = ecValue;
+  }
   
 }
 
