@@ -78,11 +78,12 @@ float temperature;
 
 // clock module
 GravityRtc rtc;
+String timestamp; 
 
 // sensor monitor EC and Temp
 //GravitySensorHub sensorHub;
 //SdService sdService = SdService(sensorHub.sensors);
-
+//PrintWriter output;
 
 
 void setup() {
@@ -90,20 +91,25 @@ void setup() {
 	ec.begin();
   ph.begin();
   
-  //rtc.setup();
+  rtc.setup();
+  rtc.adjustRtc(F(__DATE__), F(__TIME__));
   //sdService.setup();
+
 }
 
 unsigned long updateTime = 0;
+const size_t capacity = JSON_OBJECT_SIZE(5) + 70;
 
 void loop() {
-	//rtc.update();
+	
 	//sdService.update();
   
 	// ************************* Serial debugging ******************
-	if(millis() - updateTime > 2000)
+	if(millis() - updateTime > 5000)
 	{
 		updateTime = millis();
+
+    rtc.adjustRtc(F(__DATE__), F(__TIME__));
 
     temperature = getTemp(); // read your temperature sensor to execute temperature compensation
 
@@ -115,7 +121,7 @@ void loop() {
     
     pHVoltage = analogRead(PH_PIN)/1024.0*5000;  // read the voltage
     phValue = ph.readPH(pHVoltage,temperature);  // convert voltage to pH with temperature compensation
-
+    /*
     Serial.print(F("  Temp = "));
     Serial.print(temperature);
     Serial.print(F("*C  EC = "));
@@ -126,22 +132,26 @@ void loop() {
     
     Serial.print(F("  Turbidity = ")); // print out the value you read:
     Serial.print(turbidityVoltage); // print out the value you read:
-    Serial.println(/*"NTU"*/); 
+    Serial.println("NTU"); 
+    */
+
+    timestamp = (String)rtc.month + "," + (String)rtc.day + "," + (String)rtc.year + " " + (String)rtc.hour + ":" + (String)rtc.minute + ":" + (String)rtc.second;     
+        
     
+	  DynamicJsonDocument doc(capacity);
+
+    doc["timestamp"] = timestamp;
+    doc["Temprature"] = temperature;
+    doc["Turbidity"] = turbidityValue;
+    doc["pH"] = phValue;
+    doc["EC"] = ecValue;
+    
+    serializeJson(doc,Serial); 
+	  
 	}
+ 
   ec.calibration(ecVoltage,temperature);  // calibration process by Serail CMD
-  ph.calibration(pHVoltage,temperature);  // calibration process by Serail CMD
-
-  if(Serial.read() == "json")
-  {
-    DynamicJsonDocument jBuffer;
-    JsonObject& root = jBuffer.createObject();
-
-    root["Temprature"] = temperature;
-    root["Turbidity"] = turbidityValue;
-    root["pH"] = phValue;
-    root["EC"] = ecValue;
-  }
+  ph.calibration(pHVoltage,temperature);  // calibration process by Serail CMD 
   
 }
 
