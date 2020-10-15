@@ -1,0 +1,127 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2020.10.11 01:46:59 =~=~=~=~=~=~=~=~=~=~=~=
+_neutralVoltage:1503.91
+_acidVoltage:2041.02
+{
+  "Temprature": 22.6875,
+  "Turbidity": 1050.03,
+  "pH": 1.218182,
+  "EC": 0
+}{
+  "Temprature": 22.625,
+  "Turbidity": 1050.03,
+  "pH": 1.218182,
+  "EC": 0
+}{
+  "Temprature": 22.625,
+  "Turbidity": 1035.711,
+  "pH": 1.327273,
+  "EC": 0
+}{
+  "Temprature": 22.6875,
+  "Turbidity": 1050.03,
+  "pH": 1.218182,
+  "EC": 0
+}{
+  "Temprature": 22.625,
+  "Turbidity": 1035.711,
+  "pH": 1.245455,
+  "EC": 0
+}{
+  "Temprature": 22.6875,
+  "Turbidity": 1035.711,
+  "pH": 1.327273,
+  "EC": 0
+}{
+  "Temprature": 22.625,
+  "Turbidity": 1050.03,
+  "pH": 1.3,
+  "EC": 0
+}{
+  "Temprature": 22.625,
+  "Turbidity": 1050.03,
+  "pH": 1.272728,
+  "EC": 0
+}{
+  "Temprature": 22.625,
+  "Turbidity": 1035.711,
+  "pH": 1.136364,
+  "EC": 0
+}{
+  "Temprature": 23.375,
+  "Turbidity": 1050.03,
+  "pH": 1.218182,
+  "EC": 0
+}{
+  "Temprature": 26,
+  "Turbidity": 1050.03,
+  "pH": 1.245455,
+  "EC": 0
+}{
+  "Temprature": 27.5625,
+  "Turbidity": 1050.03,
+  "pH": 1.245455,
+  "EC": 0
+}{
+  "Temprature": 28.5625,
+  "Turbidity": 1050.03,
+  "pH": 1.327273,
+  "EC": 0
+}{
+  "Temprature": 29.3125,
+  "Turbidity": 1050.03,
+  "pH": 1.190909,
+  "EC": 0
+}{
+  "Temprature": 29.8125,
+  "Turbidity": 1050.03,
+  "pH": 1.218182,
+  "EC": 0
+}{
+  "Temprature": 30.25,
+  "Turbidity": 1035.711,
+  "pH": 1.245455,
+  "EC": 0
+}{
+  "Temprature": 30.625,
+  "Turbidity": 1050.03,
+  "pH": 1.218182,
+  "EC": 0
+}{
+  "Temprature": 30.875,
+  "Turbidity": 1035.711,
+  "pH": 1.218182,
+  "EC": 0
+}{
+  "Temprature": 31.125,
+  "Turbidity": 1035.711,
+  "pH": 1.218182,
+  "EC": 0
+}{
+  "Temprature": 31.3125,
+  "Turbidity": 1050.03,
+  "pH": 1.218182,
+  "EC": 0
+}{
+  "Temprature": 31.5,
+  "Turbidity": 1064.292,
+  "pH": 1.218182,
+  "EC": 0
+}{
+  "Temprature": 31.6875,
+  "Turbidity": 1064.292,
+  "pH": 1.163637,
+  "EC": 0
+}{
+  "Temprature": 31.6875,
+  "Turbidity": 1064.292,
+  "pH": 1.136364,
+  "EC": 0
+}{
+  "Temprature": 31.5625,
+  "Turbidity": 1050.03,
+  "pH": 1.109091,
+  "EC": 0
+}{=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2020.10.11 01:49:20 =~=~=~=~=~=~=~=~=~=~=~=
+_neutralVoltage:1503.91
+_acidVoltage:2041.02
+{"Temprature":31.25,"Turbidity":1078.504,"pH":1.027273,"EC":0}{"Temprature":30.625,"Turbidity":1078.504,"pH":0.863637,"EC":0}{"Temprature":30.4375,"Turbidity":1078.504,"pH":0.918182,"EC":0}{"Temprature":30.3125,"Turbidity":1064.292,"pH":0.945455,"EC":0}{"Temprature":30.125,"Turbidity":1050.03,"pH":1.163637,"EC":0}{"Temprature":30,"Turbidity":1050.03,"pH":1.054546,"EC":0}{"Temprature":29.8125,"Turbidity":1050.03,"pH":1.109091,"EC":0}{"Temprature":29.6875,"Turbidity":1050.03,"pH":1.163637,"EC":0}{"Temprature":29.5625,"Turbidity":1064.292,"pH":1.218182,"EC":0}{"Temprature":29.375,"Turbidity":1078.504,"pH":1.272728,"EC":0}{"Temprature":29.25,"Turbidity":1064.292,"pH":1.3,"EC":0}{"Temprature":29.125,"Turbidity":1050.03,"pH":1.490909,"EC":0}{"Temprature":29,"Turbidity":1050.03,"pH":1.3,"EC":0}{"Temprature":28.8125,"Turbidity":1050.03,"pH":1.272728,"EC":0}{"Temprature":28.6875,"Turbidity":1064.292,"pH":1.190909,"EC":0}{"Temprature":28.5625,"Turbidity":1078.504,"pH":1.136364,"EC":0}{"Temprature":28.4375,"Turbidity":1064.292,"pH":1.163637,"EC":0}{"Temprature":28.3125,"Turbidity":1064.292,"pH":1.163637,"EC":0}{"Temprature":28.1875,"Turbidity":1078.504,"pH":1.136364,"EC":0}{"Temprature":28.0625,"Turbidity":1078.504,"pH":1.136364,"EC":0}{"Temprature":27.9375,"Turbidity":1078.504,"pH":1.109091,"EC":0}{"Temprature":27.8125,"Turbidity":1064.292,"pH":1.081818,"EC":0}{"Temprature":27.6875,"Turbidity":1050.03,"pH":1.081818,"EC":0}{"Temprature":27.5625,"Turbidity":1050.03,"pH":1.163637,"EC":0}{"Temprature":27.5,"Turbidity":1064.292,"pH":1.190909,"EC":0}{"Temprature":27.375,"Turbidity":1064.292,"pH":1.163637,"EC":0}{"Temprature":27.3125,"Turbidity":1064.292,"pH":1.163637,"EC":0}{"Temprature":27.1875,"Turbidity":1064.292,"pH":1.163637,"EC":0}{"Temprature":27.0625,"Turbidity":1064.292,"pH":1.218182,"EC":0}{"Temprature":27,"Turbidity":1078.504,"pH":1.190909,"EC":0}{"Temprature":26.875,"Turbidity":1064.292,"pH":1.190909,"EC":0}{"Temprature":26.8125,"Turbidity":1078.504,"pH":1.163637,"EC":0}{"Temprature":26.6875,"Turbidity":1078.504,"pH":1.190909,"EC":0}{"Temprature":26.625,"Turbidity":1064.292,"pH":1.327273,"EC":0}{"Temprature":26.5,"Turbidity":1064.292,"pH":1.245455,"EC":0}{"Temprature":26.4375,"Turbidity":1064.292,"pH":1.245455,"EC":0}{"Temprature":26.375,"Turbidity":1050.03,"pH":1.327273,"EC":0}{"Temprature":26.25,"Turbidity":1050.03,"pH":1.163637,"EC":0}{"Temprature":26.1875,"Turbidity":1064.292,"pH":1.109091,"EC":0}{"Temprature":26.125,"Turbidity":1064.292,"pH":1.054546,"EC":0}{"Temprature":26.0625,"Turbidity":1064.292,"pH":1.054546,"EC":0}{"Temprature":25.9375,"Turbidity":1050.03,"pH":1.136364,"EC":0}{"Temprature":25.875,"Turbidity":1064.292,"pH":1.136364,"EC":0}{"Temprature":25.8125,"Turbidity":1064.292,"pH":1.136364,"EC":0}{"Temprature":25.75,"Turbidity":1064.292,"pH":1.109091,"EC":0}{"Temprature":25.6875,"Turbidity":1078.504,"pH":1.054546,"EC":0}{"Temprature":25.625,"Turbidity":1078.504,"pH":1.027273,"EC":0}{"Temprature":25.5625,"Turbidity":1050.03,"pH":0.972727,"EC":0}{"Temprature":25.5,"Turbidity":1050.03,"pH":0.836363,"EC":0}{"Temprature":25.4375,"Turbidity":1064.292,"pH":0.918182,"EC":0}{"Temprature":25.375,"Turbidity":1078.504,"pH":1.218182,"EC":0}{"Temprature":25.375,"Turbidity":1078.504,"pH":1.190909,"EC":0}{"Temprature":25.3125,"Turbidity":1064.292,"pH":1.245455,"EC":0}{"Temprature":25.25,"Turbidity":1064.292,"pH":1.163637,"EC":0}{"Temprature":25.1875,"Turbidity":1050.03,"pH":1.136364,"EC":0}{"Temprature":25.1875,"Turbidity":1050.03,"pH":1.081818,"EC":0}{"Temprature":25.125,"Turbidity":1050.03,"pH":1.081818,"EC":0}{"Temprature":25.0625,"Turbidity":1064.292,"pH":1,"EC":0}{"Temprature":25.0625,"Turbidity":1078.504,"pH":0.972727,"EC":0}{"Temprature":25,"Turbidity":1078.504,"pH":1,"EC":0}{"Temprature":24.9375,"Turbidity":1064.292,"pH":1.054546,"EC":0}{"Temprature":24.875,"Turbidity":1050.03,"pH":1.081818,"EC":0}{"Temprature":24.8125,"Turbidity":1050.03,"pH":1.109091,"EC":0}{"Temprature":24.8125,"Turbidity":1050.03,"pH":1.081818,"EC":0}{"Temprature":24.75,"Turbidity":1064.292,"pH":1.081818,"EC":0}{"Temprature":24.75,"Turbidity":1078.504,"pH":1.136364,"EC":0}{"Temprature":24.6875,"Turbidity":1064.292,"pH":1.190909,"EC":0}{"Temprature":24.6875,"Turbidity":1050.03,"pH":1.218182,"EC":0}{"Temprature":24.6875,"Turbidity":1050.03,"pH":1.327273,"EC":0}{"Temprature":24.625,"Turbidity":1064.292,"pH":1.136364,"EC":0}{"Temprature":24.625,"Turbidity":1064.292,"pH":1.054546,"EC":0}{"Temprature":24.625,"Turbidity":1064.292,"pH":1,"EC":0}{"Temprature":24.625,"Turbidity":1050.03,"pH":1,"EC":0}{"Temprature":24.625,"Turbidity":1050.03,"pH":1.027273,"EC":0}{"Temprature":24.625,"Turbidity":1050.03,"pH":1.054546,"EC":0}{"Temprature":24.625,"Turbidity":1064.292,"pH":1.081818,"EC":0}{"Temprature":24.625,"Turbidity":1064.292,"pH":1.081818,"EC":0}{"Temprature":24.625,"Turbidity":1064.292,"pH":1.081818,"EC":0}{"Temprature":24.625,"Turbidity":1064.292,"pH":1.054546,"EC":0}{"Temprature":24.5625,"Turbidity":1050.03,"pH":1.054546,"EC":0}{"Temprature":24.5625,"Turbidity":1078.504,"pH":1.109091,"EC":0}{"Temprature":24.5625,"Turbidity":1078.504,"pH":1.109091,"EC":0}{"Temprature":24.5625,"Turbidity":1064.292,"pH":1.109091,"EC":0}{"Temprature":24.5625,"Turbidity":1078.504,"pH":1.109091,"EC":0}{"Temprature":24.5,"Turbidity":1064.292,"pH":1.054546,"EC":0}{"Temprature":24.5,"Turbidity":1064.292,"pH":1.054546,"EC":0}{"Temprature":24.5,"Turbidity":1064.292,"pH":1.054546,"EC":0}{"Temprature":24.4375,"Turbidity":1064.292,"pH":1.109091,"EC":0}{"Temprature":24.4375,"Turbidity":1064.292,"pH":1.163637,"EC":0}{"Temprature":24.4375,"Turbidity":1050.03,"pH":1.163637,"EC":0}{"Temprature":24.375,"Turbidity":1050.03,"pH":1.109091,"EC":0}{"Temprature":24.375,"Turbidity":1050.03,"pH":1.6,"EC":0}{"Temprature":24.375,"Turbidity":1050.03,"pH":1.218182,"EC":0}{"Temprature":24.3125,"Turbidity":1064.292,"pH":1.054546,"EC":0}{"Temprature":24.3125,"Turbidity":1078.504,"pH":0.890909,"EC":0}{"Temprature":24.25,"Turbidity":1064.292,"pH":0.918182,"EC":0}{"Temprature":24.25,"Turbidity":1064.292,"pH":0.972727,"EC":0}{"Temprature":24.25,"Turbidity":1064.292,"pH":0.972727,"EC":0}{"Temprature":24.1875,"Turbidity":1064.292,"pH":0.945455,"EC":0}{"Temprature":24.1875,"Turbidity":1050.03,"pH":0.945455,"EC":0}
