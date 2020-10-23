@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Map</title>
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <!-- Stylesheets. -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="js/style.css">
+</head>
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h1 class="display-4">Water Quality Map</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div id="map"></div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Google Maps scripts. -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7p_NsbSO7TDme0twe1sCSwlSPRfHpT7EE&callback=initMap&libraries=places" async defer></script>
+  <script src="js/map.js"></script>
+  <script src="js/style.css"></script>
+  </body>
+</html>

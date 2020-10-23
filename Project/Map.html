@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Water Quality Map</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+      }
+      #map {
+        /* height: 400px; */
+		height: 100%;
+        width: 100%;
+      }
+      #legend {
+        font-family: Arial, sans-serif;
+        background: #fff;
+        padding: 10px;
+        margin: 10px;
+        border: 3px solid #000;
+      }
+      #legend h3 {
+        margin-top: 0;
+      }
+      #legend img {
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="legend"><h3>Legend</h3></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 13,
+          center: new google.maps.LatLng(33.7830, -118.1129),
+          mapTypeId: 'terrain'
+        });
+
+        var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+        var icons = {
+          activewells:{ 
+            name: 'Active Wells',
+            icon: 'http://maps.google.com/mapfiles/kml/paddle/blu-blank-lv.png'
+          },
+          miscWells:{
+            name: 'Miscellaneous',
+            icon: 'http://maps.google.com/mapfiles/kml/paddle/ylw-blank-lv.png'
+          },
+          MonoWells:{
+              name: "Monitoring wells",
+              icon: 'http://maps.google.com/mapfiles/kml/paddle/grn-blank-lv.png'
+          }
+        };
+
+        function addMarker(feature) {
+          var marker = new google.maps.Marker({
+            position: feature.position,
+            icon: icons[feature.type].icon,
+            map: map
+          });
+		  
+		  // since not every feature has content, only add infoWindow when content exist
+		  if(feature.content){
+			  var marker_infoWindow = new google.maps.InfoWindow({
+				content: feature.content
+			  });
+
+			  marker.addListener('click', function() {
+				marker_infoWindow.open(map, marker);
+			  });
+			  
+			  
+		  }
+
+        }
+
+        var features = [
+        // Active Wells in LB  
+        {
+            position: new google.maps.LatLng(33.83155, -118.102369),
+			content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'activewells'
+          }, {
+            position: new google.maps.LatLng(33.830464, -118.113013),
+			content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'activewells'
+          }, {
+            position: new google.maps.LatLng(33.830378, -118.124025),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'activewells'
+          }, {
+            position: new google.maps.LatLng(33.830375, -118.12082),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'activewells'
+          }, {
+            position: new google.maps.LatLng(33.830417, -118.105052),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'activewells'
+          }, {
+            position: new google.maps.LatLng(33.831926, -118.099261),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'activewells'
+          }, {
+            position: new google.maps.LatLng(33.828767, -118.087819),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'activewells'
+          }, {
+            position: new google.maps.LatLng(33.825665, -118.084148),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'activewells'
+          }, {
+            position: new google.maps.LatLng(33.824912, -118.091661),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'activewells'
+          }, {
+            position: new google.maps.LatLng(33.822133, -118.091354),
+			content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'activewells'
+          }, {
+            position: new google.maps.LatLng(33.819996, -118.091016),
+			content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'activewells'
+          }, {
+            position: new google.maps.LatLng(33.810208, -118.096899),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'activewells'
+          }, {
+            position: new google.maps.LatLng(33.810353, -118.10339),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'activewells'
+          }, {
+            position: new google.maps.LatLng(33.817933, -118.108255),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'activewells'
+          }, {
+            position: new google.maps.LatLng(33.819242, -118.134382),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'activewells'
+          }, {
+            position: new google.maps.LatLng(33.823555, -118.13427),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'activewells'
+          }, {
+            position: new google.maps.LatLng(33.810244, -118.150926),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'activewells'
+          }, {
+            position: new google.maps.LatLng(33.798083, -118.138175),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'activewells'
+          }, 
+          {
+            position: new google.maps.LatLng(33.798083, -118.138175),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'activewells'
+          }, {
+            position: new google.maps.LatLng(33.799551, -118.138094),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'activewells'
+          },
+          {
+            position: new google.maps.LatLng(33.799508, -118.13641),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'activewells'
+          }, {
+            position: new google.maps.LatLng(33.815513, -118.15928),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'activewells'
+          },
+          {
+            position: new google.maps.LatLng(33.827911, -118.165699),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'activewells'
+          }, {
+            position: new google.maps.LatLng(33.851619, -118.175488),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'activewells'
+          },
+          {
+            position: new google.maps.LatLng(33.851542, -118.175488),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'activewells'
+          }, {
+            position: new google.maps.LatLng(33.851443, -118.171968),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'activewells'
+          },
+          {
+            position: new google.maps.LatLng(33.83874, -118.167908),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'activewells'
+          }, {
+            position: new google.maps.LatLng(33.830516, -118.133328),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'activewells'
+          },
+          {
+            position: new google.maps.LatLng(33.820374, -118.129576),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'activewells'
+          }, {
+            position: new google.maps.LatLng(33.810344, -118.155230),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'activewells'
+          },
+
+          //// MISC Wells 
+          {
+            position: new google.maps.LatLng(33.842163, -118.199212),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'miscWells'
+          }, {
+            position: new google.maps.LatLng(33.825731, -118.08851),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'miscWells',
+          },
+
+          // Adding Monitoring Wells 
+          {
+            position: new google.maps.LatLng(33.879445, -118.206371),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'MonoWells'
+          }, {
+            position: new google.maps.LatLng(33.873186, -118.15452),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'MonoWells',
+          },
+          {
+            position: new google.maps.LatLng(33.865788, -118.186141),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'MonoWells'
+          }, {
+            position: new google.maps.LatLng(33.836031, -118.193997),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'MonoWells',
+          },
+          {
+            position: new google.maps.LatLng(33.824112, -118.212817),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'MonoWells'
+          }, {
+            position: new google.maps.LatLng(33.815198, -118.211367),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'MonoWells',
+          },
+          {
+            position: new google.maps.LatLng(33.788116, -118.211737),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'MonoWells'
+          }, {
+            position: new google.maps.LatLng(33.821175, -118.086),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'MonoWells',
+          },
+          {
+            position: new google.maps.LatLng(33.808823, -118.125523),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'MonoWells'
+          }, {
+            position: new google.maps.LatLng(33.795788, -118.107714),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'MonoWells',
+          },
+          {
+            position: new google.maps.LatLng(33.788594, -118.108074),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'MonoWells'
+          }, {
+            position: new google.maps.LatLng(33.788582, -118.112514),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'MonoWells',
+          },
+          {
+            position: new google.maps.LatLng(33.787157, -118.123403),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'MonoWells'
+          }, {
+            position: new google.maps.LatLng(33.783329, -118.156691),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'MonoWells',
+          },
+          {
+            position: new google.maps.LatLng(33.761466, -118.096569),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'MonoWells',
+          },
+          {
+            position: new google.maps.LatLng(33.763401, -118.102229),
+            content: '<h3>Data Measurements</h3> <h3>ph = </h3> <h3>Ec = </h3> <h3>Temp = </h3> <h3>Turbidity = </h3>',
+            type: 'MonoWells',
+          },
+        ];
+
+        // Implement Rectangle for LBWD department
+        const rectangle = new google.maps.Rectangle({
+            map: map,
+            strokeColor: "#0000FF",
+            strokeOpacity: 0.8,
+            strokeWidth: 2, 
+            fillColor: "#0000FF",
+            fillOpacity: 0.35,
+                                    
+            bounds: {
+                north: 33.818798, 
+                south: 33.817202,
+                east: -118.168993,
+                west: -118.171890, 
+                }
+            });
+                    
+            // Implement Rectangle for LBWD treatment plant
+            const rectangle2 = new google.maps.Rectangle({
+                map: map,
+                strokeColor: "#0000FF",
+                strokeOpacity: 0.8,
+                strokeWidth: 2, 
+                fillColor: "#0000FF",
+                fillOpacity: 0.35,
+                bounds: {
+                    north: 33.804257,
+                    south: 33.801583,
+                    east: -118.149988,
+                    west: -118.151242
+                },
+            });
+
+            const rectangle3 = new google.maps.Rectangle({
+                map: map,
+                strokeColor: "#0000FF",
+                strokeOpacity: 0.8,
+                strokeWidth: 2, 
+                fillColor: "#0000FF",
+                fillOpacity: 0.35,
+                bounds: {
+                    north: 33.815217,
+                    south: 33.815044,
+                    east: -118.173690,
+                    west: -118.174024
+                }
+            });
+
+        for (var i = 0, feature; feature = features[i]; i++) {
+          addMarker(feature);
+        }
+
+        var legend = document.getElementById('legend');
+        for (var key in icons) {
+          var type = icons[key];
+          var name = type.name;
+          var icon = type.icon;
+          var div = document.createElement('div');
+          div.innerHTML = '<img src="' + icon + '"> ' + name;
+          legend.appendChild(div);
+        }
+
+        map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfswesJkjAcixCfuhU42Ss6dHlFCG5JAk&callback=initMap">
+    </script>
+  </body>
+</html>

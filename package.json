@@ -1,11 +1,10 @@
 {
-  "name": "waterqualitynetwork",
+  "name": "water-quality-network",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start":  "node --experimental-modules ActiveWells.mjs"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -19,6 +18,10 @@
   },
   "homepage": "https://github.com/aram249/WaterQualityNetwork#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9",
+    "node-geocoder": "^3.27.0"
   }
 }
