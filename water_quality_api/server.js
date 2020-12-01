@@ -1,15 +1,14 @@
 const path = require('path');
 const express = require('express');
-const dotenv = require('dotenv'); // global variables
+const dotenv = require('dotenv');
 const cors = require('cors');
-const connectDB = require('./config/db');
-const { response } = require('express');
+const connectDb = require('./config/db');
 
-// load enviornment variables
-dotenv.config({ path: './config/config.env' });
+// load enviornment variables 
+dotenv.config({ path: './config/config.env'});
 
 // Connect to database
-connectDB();
+connectDb();
 
 const app = express();
 
@@ -19,11 +18,7 @@ app.use(express.json());
 // Enable cors
 app.use(cors());
 
-app.get('/api/v1/wells', (req, res) => {
-  res.send('Hello');
-});
-
-// Set static folder (public folder)
+// set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes

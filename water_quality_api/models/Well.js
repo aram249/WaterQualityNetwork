@@ -2,15 +2,16 @@ const mongoose = require('mongoose');
 const geocoder = require('../utils/geocoder');
 
 const WellsSchema = new mongoose.Schema({
-  wellsId: {
+  wellId: {
     type: String,
     required: [true, 'Please add a well ID'],
     unique: true,
     trim: true,
     maxlength: [10, 'Well ID must be less than 10 chars']
   },
-  address:{
-    
+  address: {
+    type: String,
+    required: [true, 'Please add an address']
   },
   location: {
     type: {
@@ -21,10 +22,11 @@ const WellsSchema = new mongoose.Schema({
       type: [Number],
       index: '2dsphere'
     },
-    createdAt: {
-      type: Date,
-      default: Date.now
-    }
+    formattedAddress: String
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
   }
 });
 
@@ -42,5 +44,4 @@ WellsSchema.pre('save', async function(next) {
   next();
 });
 
-module.exports = mongoose.model('wells', WellsSchema);
-
+module.exports = mongoose.model('Wells', WellsSchema);

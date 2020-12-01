@@ -6,4 +6,4 @@ function initMap () {
     mapTypeId: 'terrain',
     zoom: 13
   });
-};
+}
