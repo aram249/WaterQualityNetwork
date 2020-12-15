@@ -62,6 +62,7 @@ SdService :: ~ SdService ()
 // function name: setup ()
 // Function Description: Initialize the SD card
 //********************************************************************************************
+/*//
 void SdService::setup()
 {
 //	Debug::println(F("Initializing SD card..."));
@@ -86,12 +87,13 @@ void SdService::setup()
 	}
 
 }
-
+*///
 
 //********************************************************************************************
 // function name: update ()
 // Function Description: Update the data in the SD card
 //********************************************************************************************
+/*///
 void SdService::update()
 {
 	if (sdReady && millis() - sdDataUpdateTime > SDUPDATEDATATIME) 
@@ -123,7 +125,7 @@ void SdService::update()
 		}
 
 		dataString = "";
-		/*/ph
+		//ph
 		if (this->gravitySensor[0] != NULL) {
 			connectString(this->gravitySensor[0]->getValue());
 		}
@@ -157,7 +159,7 @@ void SdService::update()
 		}
 		else
 			connectString(0);
-*/
+
 		// write SD card
 		dataFile = SD.open("sensor.csv", FILE_WRITE);
 		if (dataFile)
@@ -170,7 +172,7 @@ void SdService::update()
 		sdDataUpdateTime = millis();
 	}
 }
-
+*///
 //********************************************************************************************
 // function name: connectString ()
 // Function Description: Connects the string data
