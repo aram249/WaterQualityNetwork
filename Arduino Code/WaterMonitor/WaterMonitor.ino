@@ -45,7 +45,7 @@
 #include "GravityRtc.h"
 ///#include "SdService.h"
 
-#include <ESP8266WiFi.h>
+#include <WiFiNINA.h>
 #include <ArduinoJson.h>
 
 ///#include <SD.h>
@@ -59,8 +59,8 @@
 
 //---INTERNET CONNECTION & CLIENT/SERVER VARIABLES-----------------------------------------------------------------
 // Wifi connection variables
-const char* ssid = "ATT5F7y3i8";        // YOUR WIFI SSID
-const char* password = "2u9+4d4d2?9x";  // YOUR WIFI PASSWORD
+char ssid[] = "ATT5F7y3i8";        // YOUR WIFI SSID
+char password[] = "2u9+4d4d2?9x";  // YOUR WIFI PASSWORD
 
 // Server Information Variables 
 const char* server = "34.69.136.100";   // IP ADDRESS FOR THE CLOUD SERVER
@@ -72,7 +72,7 @@ int connectionStatus;                   // CLIENTS CONNECTION STATUS
 
 //---SENSOR VARIABLES----------------------------------------------------------------------------------------------
 // Sensor Pins 
-#define DS18S20_Pin D4                  // DIGITAL WIRE 4 - DS18S20
+#define DS18S20_Pin 2                   // DIGITAL WIRE 2 - DS18S20
 #define TURBIDITY_PIN A0                // ANALOG PIN 0 - TURBIDITY 
 ///#define EC_PIN A1                       // ANALOG PIN 1 - ELECTIRCAL CONDUCTIVITY
 ///#define PH_PIN A0                       // ANALOG PIN 2 - PH
@@ -108,7 +108,6 @@ void setup() {
   
   // Starts the Serial Monitor.
 	Serial.begin(115200);
- 
 //---WIFI----------------------------------------------------------------------------------------------------------
   // Begins the WiFi connection.
   WiFi.begin(ssid,password);
