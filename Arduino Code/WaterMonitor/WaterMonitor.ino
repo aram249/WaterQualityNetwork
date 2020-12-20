@@ -176,7 +176,7 @@ void loop() {
         
     /// NEXT ITERATION WILL COLLECT THESE OTHER SENSORS DATA
     turbidityVoltage = analogRead(TURBIDITY_PIN) * (5.0 / 1024.0); // Convert the analog reading (which goes from 0 - 1023) to a voltage (0 - 5V):
-    ///turbidityValue = getTurbidity(turbidityVoltage);// read the input on analog pin 0:    
+    turbidityValue = getTurbidity(turbidityVoltage);// read the input on analog pin 2:    
     
     ///ecVoltage = analogRead(EC_PIN)/1024.0*5000;  // read the voltage
     ///ecValue =  ec.readEC(ecVoltage,temperature); // convert voltage to EC with temperature compensation
@@ -190,11 +190,11 @@ void loop() {
     timestamp = (String)rtc.month + "," + (String)rtc.day + "," + (String)rtc.year + " " + (String)rtc.hour + ":" + (String)rtc.minute + ":" + (String)rtc.second;
     ///Serial.print(F("ºC , EC = ")); Serial.print(ecValue);
     ///Serial.print(F("ms/cm , pH = ")); Serial.print(phValue);
-    ///Serial.print(F(" , Turbidity = ")); Serial.print(turbidityVoltage); Serial.println("NTU"); 
-    Serial.print(tempC); Serial.print("ºC, "); 
+    Serial.print(F("Turb = ")); Serial.print(turbidityVoltage); Serial.println("NTU, "); 
+    Serial.print(F("Temp = ")); Serial.print(tempC); Serial.print("ºC, "); 
     Serial.print(timestamp); 
     doc["timestamp"] = timestamp;
-    ///doc["Turbidity"] = turbidityValue;
+    doc["Turbidity"] = turbidityValue;
     ///doc["pH"] = phValue;
     ///doc["EC"] = ecValue;
     doc["Temprature"] = tempC;
