@@ -27,7 +27,7 @@
 
 #pragma once
 
-#include <SD.h>
+///#include <SD.h>
 #include "string.h"
 
 class SdService
@@ -51,7 +51,7 @@ private:
 	bool sdReady = false;
 
 	// file handle
-	File dataFile;
+///	File dataFile;
 	unsigned long sdDataUpdateTime;
 
 	// Connect the string data
