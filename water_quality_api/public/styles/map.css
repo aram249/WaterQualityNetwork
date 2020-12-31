@@ -1,0 +1,30 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+#map {
+    height: 500px;
+    border: 2px solid #333;
+    width: 80vw;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#legend {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  padding: 10px;
+  margin: 10px;
+  border: 3px solid #000;
+}
+#legend h1 {
+  display: flex;
+  align-items: flex-end;
+  text-align: left;
+}
+#legend img {
+  vertical-align: middle;
+}

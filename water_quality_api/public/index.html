@@ -6,7 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="js/style.css">
+        
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
         <title>Water-Quality-Api</title>
     </head>
     <body>
@@ -14,18 +15,19 @@
             <div class="row">
               <div class="col">
                 <h1 class="display-4 text-center">
-                    <em class="fas fa-faucet mr-4"></em> Water Quality Map
+                    <em class="fas fa-faucet mr-4"></em> Water Quality Management
                 </h1>
               </div>
             </div>
             <div class="row">
               <div class="col">
                 <div id="map"></div>
+                <div id="legend"><h3>Legend</h3></div>
               </div>
             </div>
           </div>
 
-        <script src="js/map.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7p_NsbSO7TDme0twe1sCSwlSPRfHpT7E&callback=initMap&libraries=places" async defer></script>   
-    </body>
+          <script src="js/map.js"></script>
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7p_NsbSO7TDme0twe1sCSwlSPRfHpT7E&callback=initMap&libraries=places" async defer></script> 
+      </body>
 </html>

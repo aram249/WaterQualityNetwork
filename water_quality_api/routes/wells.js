@@ -1,11 +1,10 @@
 const express = require('express');
-const { getWells, addWell } = require('../controllers/wells');
+const { getWells } = require('../controllers/wells');
 
 const router = express.Router();
 
 router 
     .route('/')
-    .get(getWells)
-    .post(addWell)
+    .get(getWells) 
 
 module.exports = router;
