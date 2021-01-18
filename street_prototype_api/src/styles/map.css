@@ -3,20 +3,24 @@
   height: 570px;
 }
 
-table {
+.table {
   display: table;
   border-collapse: separate;
   border-spacing: 2px;
   border-color: gray;
 }
 
-tr {
+.tr {
   display: table-row;
   vertical-align: inherit;
   border-color: inherit;
 }
 
-td {
+.td {
   display: table-cell;
   vertical-align: inherit;
+}
+
+.map.mode-create {
+  cursor: crosshair;
 }
