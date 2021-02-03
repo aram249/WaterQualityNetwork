@@ -15,29 +15,42 @@ const myIcon = new Icon ({
   popupAnchor: [0, -41],
 });
 
+const MyMarker = props => {
+  const initMarker = ref => {
+    if (ref) {
+      ref.leafletElement.openPopUp()
+    }
+  }
+  return <Marker ref={initMarker} {...props}/>
+}
+
 class map extends Component {
-  state = {
-    controls: [
-      {
-        id: 'create',
-        label: 'Create',
-        mode: CREATE,
-        isChecked: false
-      },
-      {
-        id: 'edit',
-        label: 'Edit Polygons',
-        mode: EDIT,
-        isChecked: false
-      },
-      {
-        id: 'delete',
-        label: 'Delete',
-        mode: DELETE,
-        isChecked: false
-      }
-    ]
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      controls: 
+      [
+        {
+          id: 'create',
+          label: 'Create',
+          mode: CREATE,
+          isChecked: false
+        },
+        {
+          id: 'edit',
+          label: 'Edit Polygons',
+          mode: EDIT,
+          isChecked: false
+        },
+        {
+          id: 'delete',
+          label: 'Delete',
+          mode: DELETE,
+          isChecked: false
+        }
+      ]
+    };
+  }
 
   componentDidMount() {
     document.addEventListener('keydown', event => {
@@ -78,6 +91,23 @@ class map extends Component {
     console.log('mode changed', event);
   };
 
+  isMarkerInsidePolygon(marker, poly) {
+    var polyPoints = poly.getLatLngs();       
+    var x = marker.getLatLng().lat, y = marker.getLatLng().lng;
+
+    var inside = false;
+    for (var i = 0, j = polyPoints.length - 1; i < polyPoints.length; j = i++) {
+        var xi = polyPoints[i].lat, yi = polyPoints[i].lng;
+        var xj = polyPoints[j].lat, yj = polyPoints[j].lng;
+
+        var intersect = ((yi > y) != (yj > y))
+            && (x < (xj - xi) * (y - yi) / (yj - yi) + xi);
+        if (intersect) inside = !inside;
+    }
+
+    return inside;
+  }
+
   freedrawRef = React.createRef();
 
   render() {
@@ -92,7 +122,6 @@ class map extends Component {
     });
 
     return (
-      this.props.collision ?
       <div>
         <Map
           className="map"
@@ -133,7 +162,7 @@ class map extends Component {
           />
         </div>
       </div>
-    : [] );
+     );
   }
 }
 

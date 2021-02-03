@@ -65,6 +65,7 @@
     "kareem": "^2.3.1",
     "keyv": "^3.1.0",
     "leaflet": "^1.7.1",
+    "leaflet.freedraw": "^1.1.11",
     "lodash": "^4.17.20",
     "lowercase-keys": "^1.0.1",
     "make-dir": "^3.1.0",

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Navbar from "./components/Navbar";
-import Map from "./components/map";
+import Map from "./components/LeafletMap";
 import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import './App.css';
 
