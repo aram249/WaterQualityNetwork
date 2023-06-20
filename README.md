@@ -4,7 +4,7 @@
 - JavaScript
 - CSS
 - Node.js
-- Express.JS
+- Express.js
 
 ### Back-End
 - C++ 
